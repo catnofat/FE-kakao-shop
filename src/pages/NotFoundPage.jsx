@@ -2,7 +2,7 @@
 
 import Button from "../components/atoms/Button";
 import { useNavigate } from "react-router-dom";
-
+const staticServerUrl = process.env.REACT_APP_PATH || "";
 const NotFoundPage = () => {
   const navigate = useNavigate();
   return (
@@ -18,7 +18,7 @@ const NotFoundPage = () => {
           Sorry, the page you are looking for could not be found.
         </p>
         <Button
-          onClick={() => navigate("/")}
+          onClick={() => navigate(staticServerUrl + "/")}
           className="flex items-center space-x-2 bg-blue-600 hover:bg-blue-700 text-gray-100 px-4 py-2 mt-6 rounded transition duration-150"
         >
           <svg
