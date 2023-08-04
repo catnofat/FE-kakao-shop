@@ -97,7 +97,7 @@ const LoginForm = () => {
         로그인
       </Button>
       {error && <p>{error}</p>}
-      <Link to="../register">회원가입</Link>
+      <Link to={staticServerUrl + "/register"}>회원가입</Link>
     </Container>
   );
 };
